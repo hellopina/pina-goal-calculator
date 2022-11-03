@@ -1,6 +1,7 @@
 let uniqueArr = [];
 const { generateResultCreatePortfolio } = require('./calculation.js')
 const { getRiskProfile } = require('./API/endpoint.js')
+const { html } = require('./Charts/Charts.js')
 
 
 export const riskProfile = ()=>{
@@ -35,4 +36,8 @@ export const calculateGoal = (data)=>{
   // goalInvestmentValue = 0,
 
   return generateResultCreatePortfolio(data);
+}
+
+export const generateChart=({series,chartOptions,type='bar'})=>{
+  return html(series,chartOptions?chartOptions:false,type)
 }
