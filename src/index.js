@@ -1,12 +1,6 @@
-let uniqueArr = [];
 const { generateResultCreatePortfolio } = require('./calculation.js')
-const { getRiskProfile } = require('./API/endpoint.js')
 const { html } = require('./Charts/Charts.js')
 
-
-export const riskProfile = ()=>{
-
-}
 
 /**
  * @param {Number} returnValue
@@ -34,7 +28,35 @@ export const calculateGoal = (data)=>{
   // isFromCreatePortfolio = true,
   // goalCreatedAt = null,
   // goalInvestmentValue = 0,
+  data.isRetirement=false;
+  return generateResultCreatePortfolio(data);
+}
 
+export const calculateRetirement = (data)=>{
+  
+  // returnValue => risk profile return 
+  // isRetirement, => bool
+  // initialSavingAmount,
+  // age,
+  // retireAt,
+  // income,
+  // monthlySpending,
+  // monthlySaving,
+  // goalAmount,
+  // savingDurationInMonth,
+  // LIFE_RATIO,
+  // generateMonthly = true,
+  // goalChart = [],
+  // invested = 0,
+  // currentPLValue = 0,
+  // isFromCreatePortfolio = true,
+  // goalCreatedAt = null,
+  // goalInvestmentValue = 0,
+  data.isRetirement=true;
+  return generateResultCreatePortfolio(data);
+}
+
+export const calculateEducation = (data)=>{
   return generateResultCreatePortfolio(data);
 }
 
