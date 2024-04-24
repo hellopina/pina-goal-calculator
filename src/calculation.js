@@ -1,7 +1,11 @@
-import {cloneDeep, isEmpty, parseInt} from 'lodash';
+// import {cloneDeep, isEmpty, parseInt} from 'lodash';
+
+import pkg from 'lodash';
+const { cloneDeep, isEmpty, parseInt } = pkg;
+
 import moment from 'moment';
-import constans from './constans';
-import {addMonths, formatRupiah} from './helper';
+import constans from './constans.js';
+import {addMonths, formatRupiah} from './helper.js';
 
 export function generateChartData(
   array = [],

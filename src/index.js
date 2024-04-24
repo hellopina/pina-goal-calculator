@@ -1,13 +1,27 @@
-const { generateResultCreatePortfolio } = require('./calculation.js')
-const { html } = require('./Charts/Charts.js')
+// const { generateResultCreatePortfolio } = require('./calculation.js')
+// const { html } = require('./Charts/Charts.js')
+import { generateResultCreatePortfolio  } from './calculation.js'
+import { html } from './Charts/Charts.js'
+
+/**
+ * Get All Goal List
+ * @returns {object}
+ */
+export const getGoals = ()=>{
+  return 'goalsss223'
+}
 
 
 /**
- * @param {Number} returnValue
- * @param {Boolean} isRetirement
- * @param {Number} initialSavingAmount
- * @param {Number} age
-*/
+     * @function calculateGoal
+     * @params  returnValue  = persen return value.
+     * @params  inflation    = persen inflasi (default 5%).
+     * @params target = target value
+     * @return {Object}   Kalkulasi Goal
+     * * 
+ */
+
+
 export const calculateGoal = (data)=>{
   
   // returnValue => risk profile return 
